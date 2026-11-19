@@ -3,23 +3,76 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>GTA VI trophy checklist</title>
+<title>GTA VI Trophy Guide &amp; Tracker — all 55 PS5 trophies</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23e84393'/%3E%3Ctext x='16' y='22' font-family='sans-serif' font-size='15' font-weight='bold' fill='white' text-anchor='middle'%3EVI%3C/text%3E%3C/svg%3E">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
-  <h1>GTA VI trophy checklist</h1>
-  <p id="progress">0 of 55 earned</p>
+<header class="masthead">
+  <div class="masthead-inner">
+    <p class="kicker">Grand Theft Auto VI &middot; PlayStation 5 &middot; 55 trophies</p>
+    <h1>GTA VI Trophy Guide &amp; Tracker</h1>
+    <p class="lede">Every trophy, its official description and grade, a guide in our own words with its sources, a roadmap to the platinum, and a checklist that remembers your progress. No online trophies, no cheats needed — and one trophy that can be missed.</p>
+    <div class="progress-wrap">
+      <div class="progress-bar" role="progressbar" aria-label="Trophies earned"><div id="progress-fill"></div></div>
+      <p id="progress-text">0 of 55 earned</p>
+    </div>
+    <p class="progress-by-grade" id="progress-by-grade"></p>
+  </div>
 </header>
-<div class="controls">
-  <label>Grade <select id="grade"><option value="all">All</option><option value="platinum">Platinum</option><option value="gold">Gold</option><option value="silver">Silver</option><option value="bronze">Bronze</option></select></label>
-  <button id="export" type="button">Export progress</button>
-  <label class="import">Import progress <input id="import" type="file" accept="application/json"></label>
-</div>
-<table>
-  <thead><tr><th>Earned</th><th>Trophy</th><th>Grade</th><th>How to get it</th></tr></thead>
-  <tbody id="rows"></tbody>
-</table>
+
+<main>
+  <section class="controls" aria-label="Find and filter trophies">
+    <input id="search" type="search" placeholder="Search a trophy by name…" aria-label="Search trophies">
+    <div class="chips" id="kind-chips" role="group" aria-label="Filter by kind">
+      <button type="button" data-kind="all" class="chip active">All 55</button>
+      <button type="button" data-kind="story" class="chip">Story</button>
+      <button type="button" data-kind="missable" class="chip">Missable</button>
+      <button type="button" data-kind="collectibles" class="chip">Collectibles</button>
+      <button type="button" data-kind="activities" class="chip">Activities</button>
+      <button type="button" data-kind="online" class="chip">Online</button>
+    </div>
+    <div class="control-row">
+      <label>Grade
+        <select id="grade">
+          <option value="all">All grades</option>
+          <option value="platinum">Platinum</option>
+          <option value="gold">Gold</option>
+          <option value="silver">Silver</option>
+          <option value="bronze">Bronze</option>
+        </select>
+      </label>
+      <label class="toggle"><input id="spoiler" type="checkbox" checked> Hide story spoilers</label>
+      <label class="toggle"><input id="earned-only" type="checkbox"> Earned only</label>
+      <button id="export" type="button">Export progress</button>
+      <label class="import">Import progress <input id="import" type="file" accept="application/json"></label>
+    </div>
+    <p id="result-count" class="result-count"></p>
+  </section>
+
+  <section class="missable-callout" aria-label="Missable trophy warning">
+    <h2>⚠ The one trophy you can miss</h2>
+    <p><strong>Positive Mental Attitude</strong> (bronze) — meditate at all 18 spots across Leonida. The first spot is offered at home in Chapter 1 and is gone after that chapter, and it is not confirmed whether the trophy needs it. <strong>Do it in Chapter 1 to be safe.</strong> PowerPyx and GTABase agree it is the only trophy that can be missed; story trophies and everything on the 100% checklist cannot be missed. <a href="#trophy-28">Read its guide ↓</a></p>
+  </section>
+
+  <section class="roadmap" id="roadmap" aria-label="Roadmap to the platinum">
+    <h2>Roadmap to the platinum — about 200 hours</h2>
+    <p class="roadmap-intro">PowerPyx rates the platinum 4/10 at about 200 hours, in one playthrough: free roam after the story, no mission replay, no New Game+, no difficulty settings. Cheats disable trophies and saving, so keep trophy runs cheat-free (PowerPyx, GTABase).</p>
+    <div class="stages" id="stages"></div>
+  </section>
+
+  <section aria-label="Trophy checklist">
+    <h2 id="list-heading">Checklist</h2>
+    <p class="list-note">Tick a trophy when you earn it — progress is saved in this browser. Click a trophy to open its guide and sources.</p>
+    <div id="empty" class="empty" hidden></div>
+    <ul id="trophy-list" class="trophy-list"></ul>
+  </section>
+
+  <footer>
+    <h2>Sources &amp; notes</h2>
+    <p>Trophy names, descriptions and grades are as PlayStation publishes them, as listed by <a href="https://www.exophase.com/game/grand-theft-auto-vi-psn/trophies/">Exophase</a> and PSNProfiles. The guides are written for this entry in its own words and cite their sources beside each trophy: <a href="https://gta-zone.com/news/gta-6-trophies-achievements/">GTA Zone</a> (which synthesises PowerPyx and GTABase), PowerPyx's trophy guide and GTABase's trophy list. Where PowerPyx and GTABase have not yet confirmed an exact trigger, the guide says so instead of guessing. 28 trophies are hidden on PlayStation until earned; this guide's spoiler setting hides story trophies until you tick them earned. This is an unofficial fan guide, not affiliated with Rockstar Games, and it uses no Rockstar logo, artwork or screenshots.</p>
+  </footer>
+</main>
 <script type="module" src="app.js"></script>
 </body>
 </html>

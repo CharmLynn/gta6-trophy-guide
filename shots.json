@@ -1,5 +1,1 @@
-[
-  { "file": "1-checklist.jpg", "path": "/", "viewport": { "width": 1280, "height": 800 } },
-  { "file": "2-silver.jpg", "path": "/", "grade": "silver", "viewport": { "width": 1280, "height": 800 } },
-  { "file": "3-bronze.jpg", "path": "/", "grade": "bronze", "scroll": 1400, "viewport": { "width": 1280, "height": 800 } }
-]
+[{"file":"1-cover.jpg","note":"Checklist with the platinum's guide open and its sources; filters, spoiler toggle and export/import in the sticky controls.","path":"/","viewport":{"height":800,"width":1280}},{"file":"2-guide.jpg","note":"Positive Mental Attitude, the missable trophy, with its guide and sources open.","path":"/","viewport":{"height":800,"width":1280}},{"file":"3-roadmap.jpg","note":"The roadmap to the platinum: three stages with times and trophy lists.","path":"/","viewport":{"height":800,"width":1280}},{"file":"4-spoiler.jpg","note":"Story filter with the spoiler setting on: story trophies hidden until earned.","path":"/#filter=story","viewport":{"height":800,"width":1280}}]
